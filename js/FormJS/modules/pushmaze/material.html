@@ -1,0 +1,331 @@
+<style data-pushmaze-body-style>
+    body > *:not([data-template-engine]) {
+        {pushmaze.body.styles}
+    }
+</style>
+
+<style>
+    .pushmaze-promt-background {
+        position: fixed;
+        display: block;
+        width: 100%;
+        height: 100vh;
+        transform: scale(1.5);
+        z-index: 999999;
+        {pushmaze.background.styles}
+    }
+
+    .pushmaze-promt-container {
+        position: fixed;
+        display: block;
+        padding: 20px;
+        border-radius: 4px;
+        box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.2);
+        z-index: 9999999;
+        overflow: hidden;
+        cursor: default;
+        background-color: {pushmaze.promt.background};
+    }
+
+    .pushmaze-promt-container:hover {
+        {pushmaze.promt.hover.container}
+    }
+
+    .pushmaze-promt-size-small {
+        padding: 12px;
+        width: 100%;
+        max-width: 380px;
+        min-width: 320px;
+    }
+
+    .pushmaze-offset {
+        position: relative;
+        display: block;
+        width: 100%;
+    }
+
+    @media (max-width: 380px) {
+        .pushmaze-promt-container.pushmaze-promt-size-small.pushmaze-promt-position-tc {
+            top: 0;
+            border-radius: 0;
+        }
+    }
+
+    .pushmaze-promt-size-small .pushmaze-promt-title {
+        font-size: 15px;
+    }
+
+    .pushmaze-promt-size-small .pushmaze-promt-subtitle {
+        font-size: 12px;
+        margin: 5px 0;
+    }
+
+    .pushmaze-promt-size-small .pushmaze-promt-button {
+        padding: 8px 15px;
+        font-size: 12px;
+    }
+
+    .pushmaze-promt-size-small .pushmaze-promt-buttons {
+        margin: 0;
+    }
+
+    .pushmaze-promt-size-default {
+        width: 100%;
+        max-width: 480px;
+        min-width: 320px;
+    }
+
+    @media (max-width: 480px) {
+        .pushmaze-promt-container.pushmaze-promt-size-default.pushmaze-promt-position-tc {
+            top: 0;
+            border-radius: 0;
+        }
+    }
+
+    .pushmaze-promt-size-big {
+        width: 100%;
+        max-width: 700px;
+        min-width: 320px;
+    }
+
+    @media (max-width: 700px) {
+        .pushmaze-promt-container.pushmaze-promt-size-big.pushmaze-promt-position-tc {
+            top: 0;
+            border-radius: 0;
+        }
+    }
+
+    .pushmaze-promt-size-big .pushmaze-promt-title {
+        font-size: 24px;
+    }
+
+    .pushmaze-promt-size-big .pushmaze-promt-subtitle {
+        font-size: 17px;
+        line-height: 1.4;
+        margin: 10px 0 0;
+    }
+
+    .pushmaze-promt-size-big .pushmaze-promt-button {
+        padding: 16px 30px;
+        font-size: 16px;
+    }
+
+    .pushmaze-promt-position-cc {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .pushmaze-promt-position-tc {
+        left: 50%;
+        transform: translateX(-50%);
+        top: {pushmaze.promt.indent};
+    }
+
+    .pushmaze-promt-position-bc {
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: {pushmaze.promt.indent};
+    }
+
+    .pushmaze-promt-position-tr {
+        top: {pushmaze.promt.indent};
+        right: {pushmaze.promt.indent};
+    }
+
+    .pushmaze-promt-position-tl {
+        top: {pushmaze.promt.indent};
+        left: {pushmaze.promt.indent};
+    }
+
+    .pushmaze-promt-position-br {
+        bottom: {pushmaze.promt.indent};
+        right: {pushmaze.promt.indent};
+    }
+
+    .pushmaze-promt-position-bl {
+        bottom: {pushmaze.promt.indent};
+        left: {pushmaze.promt.indent};
+    }
+
+    .pushmaze-promt-wrapper {
+        display: flex;
+        width: 100%;
+        align-items: center;
+    }
+
+    .pushmaze-promt-icon {
+        width: 100%;
+        min-width: 18%;
+        margin-right: 20px;
+    }
+
+    .pushmaze-promt-icon img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center center;
+    }
+
+    .pushmaze-promt-icon-position-bg {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url({site_icon});
+        background-position: center center;
+        background-size: cover;
+        z-index: -1;
+        opacity: {pushmaze.promt.icon.opacity};
+        {pushmaze.promt.icon.styles}
+    }
+
+    .pushmaze-promt-content {
+        width: 100%;
+        min-width: 80%;
+    }
+
+    .pushmaze-promt-title {
+        font-size: 18px;
+        font-weight: bold;
+        color: {pushmaze.promt.title.color};
+        {pushmaze.promt.title.styles}
+    }
+
+    .pushmaze-promt-subtitle {
+        line-height: 1.4;
+        font-size: 14px;
+        margin: 8px 0;
+        color: {pushmaze.promt.description.color};
+        {pushmaze.promt.description.styles}
+    }
+
+    .pushmaze-promt-buttons {
+        display: block;
+        text-align: right;
+        margin-top: 10px;
+    }
+
+    .pushmaze-promt-button {
+        display: inline-block;
+        padding: 12px 25px;
+        line-height: 1;
+        background-color: transparent;
+        border: none;
+        font-size: 14px;
+        text-transform: uppercase;
+        border-radius: 2px;
+        font-weight: 400;
+        white-space: nowrap;
+        cursor: pointer;
+        outline: none;
+        {pushmaze.promt.buttons.styles}
+    }
+
+    .pushmaze-promt-button-disallow {
+        color: {pushmaze.promt.buttons.disallow.color};
+        background-color: {pushmaze.promt.buttons.disallow.background};
+        {pushmaze.promt.buttons.allow.styles}
+    }
+
+    .pushmaze-promt-button-allow {
+        color: {pushmaze.promt.buttons.allow.color};
+        background-color: {pushmaze.promt.buttons.allow.background};
+        {pushmaze.promt.buttons.allow.styles}
+    }
+
+    .pushmaze-chicklet-container {
+        display: none;
+        position: fixed;
+        padding: 10px 15px;
+        white-space: nowrap;
+        height: auto;
+        cursor: pointer;
+        z-index: 999999;
+        background-color: {pushmaze.chicklet.background};
+        color: {pushmaze.chicklet.color};
+        {pushmaze.chicklet.styles}
+    }
+
+    .pushmaze-chicklet-position-tr {
+        top: 20%;
+        right: 0;
+        transform: rotate(-90deg);
+        transform-origin: bottom right;
+        border-radius: 3px 3px 0 0;
+    }
+
+    .pushmaze-background-video {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        min-width: 100%; 
+        min-height: 100%;
+        transform: scale(1.3);
+        z-index: 1;
+        opacity: {pushmaze.background.video.opacity};
+    }
+
+    .pushmaze-promt-background-video {
+        position: absolute;
+        display: block;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+        opacity: {pushmaze.promt.video.opacity};
+        {pushmaze.promt.video.styles}
+    }
+</style>
+
+<div data-pushmaze-offset v-if="{pushmaze.offset}" class="pushmaze-offset"></div>
+
+<video v-if="{pushmaze.background.video}" data-pushmaze-background-video class="pushmaze-background-video" autoplay loop muted>
+    <source v-if="{pushmaze.background.video.src.mp4}" src="{pushmaze.background.video.src.mp4}" type="video/mp4">
+</video>
+
+<div data-pushmaze-background class="pushmaze-promt-background" v-if="{pushmaze.background.styles}"></div>
+
+<div data-pushmaze-hover-background class="pushmaze-promt-hover-background" v-if="{pushmaze.promt.hover.background}"></div>
+
+<div class="pushmaze-promt-root">
+<div data-pushmaze-promt class="pushmaze-promt-container pushmaze-promt-size-{pushmaze.promt.size} pushmaze-promt-position-{pushmaze.promt.position}">
+    <div class="pushmaze-promt-icon-position-bg" v-if="javascript:'{pushmaze.promt.icon.position}' === 'bg'"></div>
+    <video data-pushmaze-promt-background-video v-if="{pushmaze.promt.video.src}" class="pushmaze-promt-background-video" autoplay loop muted>
+        <source v-if="{pushmaze.promt.video.src.mp4}" src="{pushmaze.promt.video.src.mp4}" type="video/mp4">
+    </video>
+    <div class="pushmaze-promt-wrapper">
+        <div class="pushmaze-promt-icon" v-if="javascript:'{pushmaze.promt.icon.src}' != null && '{pushmaze.promt.icon.position}' === 'left'">
+            <img draggable="false" src="{pushmaze.promt.icon.src}" alt="{pushmaze.promt.title.text}">
+        </div>
+        <div class="pushmaze-promt-content">
+            <div class="pushmaze-promt-title">{pushmaze.promt.title.text}</div>
+            <div class="pushmaze-promt-subtitle">{pushmaze.promt.description.text}</div>
+        </div>
+        <div class="pushmaze-promt-icon" v-if="javascript:'{pushmaze.promt.icon.src}' != null && '{pushmaze.promt.icon.position}' === 'right'">
+            <img draggable="false" src="{pushmaze.promt.icon.src}" alt="{pushmaze.promt.title.text}">
+        </div>
+    </div>
+    <div class="pushmaze-promt-buttons">
+        <button data-pushmaze-disallow class="pushmaze-promt-button pushmaze-promt-button-disallow">{pushmaze.promt.buttons.disallow.text}</button>
+        <button data-pushmaze-allow class="pushmaze-promt-button pushmaze-promt-button-allow">{pushmaze.promt.buttons.allow.text}</button>
+    </div>
+</div>
+</div>
+
+<div data-pushmaze-chicklet class="pushmaze-chicklet-container pushmaze-chicklet-position-{pushmaze.chicklet.position}">
+    <div class="pushmaze-chicklet-text">{pushmaze.chicklet.text}</div>
+</div>

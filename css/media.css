@@ -1,0 +1,522 @@
+@media (max-width: 1100px) {
+  .container {
+    max-width: 991px
+  }
+
+  .teams__slider {
+    width: 43%
+  }
+
+  .teams__slider-text {
+    width: 100%
+  }
+
+  .teams__slider .teams__images img {
+    width: 44%
+  }
+}
+
+@media (max-width: 991px) {
+  .container {
+    max-width: 769px
+  }
+
+  .platform,
+  .about,
+  .teams__block {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center
+  }
+
+  .platform.about .container,
+  .about.about .container,
+  .teams__block.about .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse
+  }
+
+  .platform .container,
+  .about .container,
+  .teams__block .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center
+  }
+
+  .teams__slider .teams__text h3::after {
+    left: 0;
+    -webkit-transform: none;
+    transform: none
+  }
+
+  .after-title::after {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%)
+  }
+
+  .teams .teams__text:first-child h3 {
+    margin: 0 auto 44px
+  }
+
+  .teams__block {
+    text-align: center
+  }
+
+  .teams__block .teams__images {
+    margin-left: 0;
+    margin-bottom: 32px
+  }
+
+  .teams__slider-wrapper {
+    overflow: hidden;
+    height: 0;
+  }
+
+  .teams__mob {
+    display: block
+  }
+
+  .main-btn {
+    margin-left: auto;
+    margin-right: auto
+  }
+
+  .about__text,
+  .platform__text {
+    margin: 0 auto;
+    text-align: center
+  }
+
+  .about__img,
+  .platform__img {
+    margin: 0 auto 40px
+  }
+
+  .computer img {
+    -webkit-transform: translateX(7%);
+    transform: translateX(7%)
+  }
+
+  .modal-main.congrats .modal-main__content {
+    padding: 0 20px;
+    overflow: hidden
+  }
+
+  .modal-main__img img {
+    min-width: 200px
+  }
+
+  .modal-main.congrats .modal-main__text {
+    margin-left: 32px
+  }
+
+  .modal-main.congrats .modal-main__text {
+    max-width: 100%
+  }
+}
+
+@media (max-width: 769px) {
+  .container {
+    max-width: 576px
+  }
+
+  .header .container {
+    max-width: 100%
+  }
+
+  .header__nav {
+    margin-left: 48px
+  }
+
+  img {
+    max-width: 100%
+  }
+
+  .intro {
+    padding: 200px 0 600px
+  }
+
+  .intro__text h1 {
+    font-size: 52px;
+    line-height: 57px
+  }
+
+  h2 {
+    font-size: 40px;
+    line-height: 48px
+  }
+
+  .footer .container {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column
+  }
+
+  .footer__logo {
+    margin-bottom: 30px
+  }
+
+  .footer__nav {
+    margin-left: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column
+  }
+
+  .footer__nav a {
+    margin-bottom: 32px;
+    margin-left: 0
+  }
+
+  .footer__text {
+    margin-top: 0
+  }
+}
+
+@media (max-width: 620px) {
+  .burger {
+    display: block
+  }
+
+  .intro {
+    padding: 200px 0 400px
+  }
+
+  .header {
+    padding: 20px 0
+  }
+
+  .header__nav {
+    display: none
+  }
+
+  .intro__slider__item{
+    margin-bottom: 4.5px;
+  }
+  .intro__slider__item img{
+    height: 63px;
+    width: 63px;
+  }
+
+  .intro__slider {
+    width: 1200px;
+    -webkit-transform: translate(calc(-50% - 60px), 160px);
+    transform: translate(calc(-50% - 60px), 160px)
+  }
+
+  .footer {
+    padding: 20px 0
+  }
+
+  .modal-main.congrats .modal-main__content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+    padding-top: 88px !important;
+    text-align: center
+  }
+
+  .modal-main.congrats .modal-main__title {
+    font-size: 24px;
+    line-height: 34px
+  }
+
+  .modal-main.congrats p {
+    margin-bottom: 12px;
+    font-size: 14px;
+    line-height: 20px
+  }
+
+  .modal-main.congrats .modal-main__footer {
+    font-size: 16px;
+    line-height: 26px
+  }
+
+  .modal-main.congrats .modal-main__text {
+    text-align: center !important
+  }
+
+  .modal-main.congrats .modal-main__img {
+    width: calc(100% + 80px);
+    -webkit-transform: translateX(-20px);
+    transform: translateX(-20px)
+  }
+
+  .modal-main.congrats .modal-main__img img {
+    display: none;
+    width: 100%
+  }
+
+  .modal-main.congrats .modal-main__img img.mob {
+    display: block !important
+  }
+}
+
+@media (max-width: 576px) {
+
+  p,
+  .teams__text p {
+    font-size: 14px;
+    line-height: 20px
+  }
+
+  p.small {
+    font-size: 10px;
+    line-height: 16px
+  }
+
+  h2,
+  h3 {
+    font-size: 20px;
+    line-height: 28px
+  }
+
+  .container {
+    max-width: 375px
+  }
+
+  .after-title {
+    margin-bottom: 28px !important
+  }
+
+  .after-title::after {
+    bottom: -12px !important
+  }
+
+  .logo {
+    font-size: 24px;
+    line-height: 32px
+  }
+
+  .main-btn {
+    max-width: 240px;
+    height: 44px;
+    padding: 10px;
+    font-size: 16px;
+    line-height: 24px;
+    text-transform: none
+  }
+
+  .intro {
+    padding: 107px 0 280px
+  }
+
+  .intro__text {
+    text-align: center
+  }
+
+  .intro__text h1 {
+    font-size: 24px;
+    line-height: 32px
+  }
+
+  .intro__text h1 br {
+    display: none
+  }
+
+  .intro__text p {
+    font-size: 14px;
+    line-height: 20px
+  }
+
+  .intro__text .main-btn {
+    margin: 0 auto
+  }
+
+  .teams {
+    padding: 32px 0 70px
+  }
+
+  .teams .title h2 {
+    margin-top: 0;
+    margin-bottom: 44px
+  }
+
+  .teams .title h2::after {
+    top: auto;
+    bottom: -20px
+  }
+
+  .teams .title .mob {
+    display: block
+  }
+
+  .teams .title .desk {
+    display: none
+  }
+
+  .teams__block {
+    margin-bottom: 40px
+  }
+
+  .teams__mob__text p {
+    margin-top: 12px;
+    font-size: 16px;
+    line-height: 24px
+  }
+
+  .access {
+    padding: 20px
+  }
+
+  .access p {
+    margin: 12px 0
+  }
+
+  .access.success {
+    padding: 20px
+  }
+
+  .access.success .container {
+    padding: 20px
+  }
+
+  .about {
+    padding: 32px 0 40px
+  }
+
+  .about__text p {
+    margin-bottom: 12px
+  }
+
+  .why {
+    padding: 32px 0
+  }
+
+  .why__block {
+    margin-top: 50px;
+    -webkit-transform: translateX(20px);
+    transform: translateX(20px);
+  }
+
+  .why__item {
+    width: calc(100% - 20px);
+    margin-left: 0 !important;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding: 20px 10px 50px
+  }
+
+  .why__item>div {
+    margin: 0 auto;
+    text-align: center
+  }
+
+  .why__item__counter {
+    height: 92px;
+    width: 92px;
+    min-width: 92px;
+    font-size: 36px;
+    line-height: 44px;
+    margin-bottom: 32px !important
+  }
+
+  .why__item__text h3 {
+    font-size: 24px;
+    line-height: 32px;
+    margin-bottom: 16px
+  }
+
+  .why__item__text p {
+    font-size: 16px;
+    line-height: 24px
+  }
+
+  .platform {
+    padding: 32px 0
+  }
+
+  .computer {
+    padding: 30px 0 50px
+  }
+
+  .hurry {
+    padding: 30px 0
+  }
+
+  .info {
+    padding: 20px 0 40px
+  }
+
+  form.form-container .form_group--name,
+  form.form-container .form_group--email,
+  form.form-container .form_input--group {
+    margin-top: 16px
+  }
+
+  form.form-container .send-form {
+    margin-top: 24px
+  }
+
+  .modal-main__content {
+    padding: 78px 20px;
+    background-image: none
+  }
+
+  .modal-main__close {
+    top: 18px;
+    right: 18px
+  }
+
+  .modal-main__wrapper {
+    padding: 20px 10px
+  }
+
+  .modal-main #activate_form {
+    margin-top: 24px
+  }
+}
+
+@media (max-width: 375px) {
+  .computer .container {
+    padding: 0
+  }
+
+  .computer .container img {
+    display: none;
+    -webkit-transform: none;
+    transform: none
+  }
+
+  .computer .container img.mob {
+    display: block
+  }
+
+  .intro__slider {
+    -webkit-transform: translate(calc(-50% - 60px), 120px);
+    transform: translate(calc(-50% - 60px), 120px)
+  }
+}
+
+@media (max-height: 650px) {
+  .modal-main__content {
+    padding: 40px 20px
+  }
+
+  .modal-main__wrapper {
+    padding: 10px
+  }
+}
